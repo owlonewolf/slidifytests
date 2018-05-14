@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Geodata</title>
+  <meta name="description" content="">
+  
+  <meta name="author" content="">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/default.css" id="theme">
+  
+  <style>
+  .reveal p {
+      text-align: left;
+      padding-bottom: 5px;
+      }
+  .reveal h2 {
+      color: #c1d192;
+      }
+  .reveal h4 { 
+      text-align: left;
+      }
+  .reveal picture {
+      text-align: left;
+      }
+  </style>
+  
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h2>Geodata</h2>
+  
+</section>
+<section class='' data-state='' id='slide-2'>
+  <h2>Dagens præsentation</h2>
+  <h4>To formål</h4>
+
+<ul>
+<li>Om dataarbejde </li>
+<li>Projektstruktur
+&nbsp;<br></li>
+</ul>
+
+<h4>Indhold</h4>
+
+<ol>
+<li>Om dataarbejde</li>
+<li>Formålsbeskrivelse<br></li>
+<li>Projektstruktur<br>
+3b. Delelementer<br></li>
+<li>Sideløbende processer</li>
+<li>Planlægning</li>
+<li>Nyt<br></li>
+<li>Diverse<br></li>
+</ol>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h2>Lidt om dataarbejde</h2>
+  <p><img src="https://blog.eoda.de/wp-content/uploads/2016/06/Folie-Hadley-Wickham.png" align="right"
+  width="450" height="450" ></p>
+
+<p><del>Løse problemer</del><br>
+   Lave programmer<br>
+&nbsp;<br>
+ Kræver strømlinet import </p>
+
+</section>
+<section class='' data-state='' id='slide-4'>
+  <h2>Formål</h2>
+  <p>Evidensbaseret analyseværktøj</p>
+
+<ul>
+<li>Svarer på de rette spørgsmål</li>
+<li>Bredt anvendeligt </li>
+<li>Visuelt</li>
+<li>Dokumenteret</li>
+<li>Fremtidssikret (relativt)
+
+<ul>
+<li>I dag: Tableau Server</li>
+<li>Efter sommer: Elastic Search</li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-5'>
+  <h2>Projektstruktur</h2>
+  <ul>
+<li>Kravspecifikation<br></li>
+<li>Dataimport</li>
+<li>Datawrangling</li>
+<li>Dokumentation af datamodel<br></li>
+<li>Efterprøvninger<br></li>
+<li>Metodik<br>
+&nbsp;</li>
+</ul>
+
+<h5>Værktøj klar!</h5>
+
+<p>&nbsp;</p>
+
+<p>NB: Parallelle processer</p>
+
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>1. Kravspecifikation</h2>
+    <ul>
+<li>Ideal-info?
+
+<ul>
+<li><font color="red">Udkast på vej</font></li>
+<li>Input fra alle</li>
+</ul></li>
+<li>Idealer VS tilgængelige data
+
+<ul>
+<li>Datadokumentation</li>
+</ul></li>
+<li>Antagelser 
+
+<ul>
+<li>fx Antal køkkener proxy for antal husstande?</li>
+</ul></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>2. Dataimport</h2>
+
+<p>Strømlinet datatunnel</p>
+
+<ul>
+<li><del>Adresser</del> (DAR)</li>
+<li>Fastnetforbindelser (TDN dækningsdata)</li>
+<li>Selskaber (TDN + ERST)</li>
+<li>CVR</li>
+<li>BBR?</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>3. Datawrangling</h2>
+
+<p>Programmer istedet for processer</p>
+
+<ul>
+<li>Klargøring af data
+
+<ul>
+<li>Rensning</li>
+</ul></li>
+<li>Til server @Peter Niebling</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>4. Dokumentation af datamodel</h2>
+
+<ul>
+<li>Jura? GDPR?<br></li>
+<li>Beskrivelse af data, fx 
+
+<ul>
+<li>Hvad betyder husstand, hvordan tæller vi det?<br></li>
+<li>Hvad betyder &quot;adgangsadresseID&quot;?<br></li>
+<li>Hvorfor kan der være 530 husstande på en adg.adresse?</li>
+</ul></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>5. Efterprøvninger</h2>
+
+<p>Vi har fremskrivninger af 2017 &amp; 18, baseret på tal fra 2012-16.  </p>
+
+<p>&nbsp;  </p>
+
+<p>For alle fremskrivningsmodeller (lineær, exp, potens) skal vi:  </p>
+
+<ul>
+<li>Teste overensstemmelse mellem data fra 2017 og fremskrivningen af 2017.</li>
+<li>Lave ny fremskrivning af 2018, baseret på data fra 2012-2017.</li>
+<li>Teste overensstemmelse mellem gl. og ny fremskrivning af 2018.</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>6. Analysemetodik</h2>
+
+<p>Afhængigt af konklusioner fra efterprøvning</p>
+
+<ul>
+<li>Notat til internt brug
+
+<ul>
+<li>Hvordan skal man analysere?</li>
+<li>Hvorfor?</li>
+<li>Hvilken model / kriterier har vi for at udpege SMP</li>
+</ul></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section class='' data-state='' id='slide-7'>
+  <h2>Sideløbende arbejde</h2>
+  <ul>
+<li>Notatskrivning 
+
+<ul>
+<li>Til internt brug / WIP</li>
+<li>Til orientering @Team @Hebola</li>
+<li>Kan senere være basis for officielle notater<br>
+&nbsp;<br></li>
+</ul></li>
+<li>Inddragelse af team
+
+<ul>
+<li>feedback + input<br>
+&nbsp;<br></li>
+</ul></li>
+<li>Statusmøder</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-8'>
+  <h2>Nyt fra vestfronten</h2>
+  <p>ENS (daekningdata):  </p>
+
+<ul>
+<li>Netejer?<br></li>
+<li>Kan ikke genkende data<br></li>
+<li><del>Filkassen</del><br>
+&nbsp;<br></li>
+</ul>
+
+<p>BBR (erhverv/husstand): </p>
+
+<ul>
+<li><del>Adgang</del> </li>
+<li>Kvalitet </li>
+<li>Format skal transformeres</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-9'>
+  <h2>Planlægning</h2>
+  <p>Lang sigt &gt; ElasticSearch/ERST Distr.<br>
+Kort sigt &gt; erfaring og metode<br>
+&nbsp;<br>
+Hvad arbejder vi på nu</p>
+
+<ul>
+<li>BBR</li>
+<li>ENS&#39; Dækningsdata - ny data?</li>
+<li>Kravspecifikation<br></li>
+</ul>
+
+<p>Hvad arbejder vi på i morgen</p>
+
+<ul>
+<li>Datadokumentation: 
+
+<ul>
+<li>Hvad indeholder data?</li>
+<li>Jura?</li>
+</ul></li>
+<li>Upload til Tableau server</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-10'>
+  <h2>Diverse</h2>
+  <p>Metodiske problemer v. fremskrivning?</p>
+
+<ul>
+<li>Antallet af observationer (3 år, 98 kommuner)</li>
+<li>Modellere en kompleks verden</li>
+<li>Inkonsistent dataindsamling<br>
+&nbsp;<br></li>
+</ul>
+
+<p>Annotering af kode</p>
+
+<ul>
+<li>Har lavet pilot m MM</li>
+<li>Sparket til hjørne
+
+<ul>
+<li>Ellers arbejde<sup>2</sup></li>
+</ul></li>
+</ul>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
